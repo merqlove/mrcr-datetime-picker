@@ -3,6 +3,8 @@
 $(document).ready(function() {
     jQuery('input.hasDatetimePicker').datetimepicker({
         dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
         beforeShow: function () {
             setTimeout(
                 function () {
