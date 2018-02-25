@@ -1,0 +1,100 @@
+= Introduction
+
+This is a simple gem for {Active Admin}[http://www.activeadmin.info] that just 
+adds support for Date/Time picker.
+
+Screenshot[https://raw.github.com/mrcr/mrcr-datetime-picker/master/doc/mrcr-datetime-picker.png]
+
+= Usage
+
+== Code samples
+
+Here comes a quick code sample. Sorry, currently no detailed docs.
+
+That should create nice date/time picker for User#born_at. Associated column in the DB should be nullable.
+
+To delete previously stored date/time just make all fields blank (date, hour and minute).
+
+=== ActiveAdmin
+
+  ActiveAdmin.register User do
+    form do |f|
+      f.inputs do
+        f.input :born_at, :as => :mrcr_datetime_picker
+      end
+
+      f.buttons
+    end
+  end
+
+
+= Installation
+
+== Code itself
+
+=== Gems
+
+The gems are hosted at Rubygems.org[http://rubygems.org]. Make sure you're
+using the latest version of rubygems:
+
+  $ gem update --system
+
+Then you can install the gem as follows:
+
+  $ gem install mrcr-datetime-picker
+
+=== Bundler
+
+Add to your Gemfile:
+
+  gem "mrcr-datetime-picker"
+
+and then type:
+
+  bundle install
+
+=== From the GitHub source
+
+The source code is available at https://github.com/merqlove/mrcr-datetime-picker.
+You can either clone the git repository or download a tarball or zip file.
+Once you have the source, you can unpack it and use from wherever you downloaded.
+
+== Assets
+
+=== CSS
+
+  @import "mrcr-datetime-picker/base";
+
+Otherwise, just manually append the code from {this file}[https://raw.github.com/mrcr/mrcr-datetime-picker/master/app/assets/stylesheets/mrcr-datetime-picker/base.css]
+to your CSS stylesheet.
+
+=== JavaScript
+
+  //= require mrcr-datetime-picker/base
+
+Otherwise, just manually append the code from {this file}[https://raw.github.com/mrcr/mrcr-datetime-picker/master/app/assets/javascripts/mrcr-datetime-picker/base.js]
+to your JS script.
+
+= Additional info
+
+== Versions known to work
+
+Code was tested with:
+
+* ruby[http://www.ruby-lang.org] 2.5.0 [ amd64 ] and 2.4.1 [ amd64 ] under Rbenv[http://github.com/rbenv],
+* ActiveAdmin[http://www.activeadmin.info] 1.0+,
+* {Ruby on Rails}[http://www.rubyonrails.org] 5.1.
+
+== Authors
+
+{Alexander Merkulov}[https://github.com/merqlove]
+
+== Inspired by
+
+{just-datetime-picker}[https://github.com/mspanc/just-datetime-picker]
+
+== ChangeLog
+
+=== 0.0.1 (February 25, 2017)
+
+* Initial version ({Alexander Merkulov}[https://github.com/merqlove]
